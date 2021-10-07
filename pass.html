@@ -25,6 +25,12 @@
 
 
 <p id="result" style="margin:10px;"></p>
+<div>
+
+    <img src="AfricanBushElephant.jpg" id="picture" style="height: 200px;width: 200px;" onclick="newImage()"></img>
+
+</div>
+
 
 <script> 
  correct = 0;
@@ -46,11 +52,34 @@ function processPhrase (){
      out.innerHTML = "Correct: " + correct + "<br>" + "Wrong: " + wrong;
     
 }
+
+
+usingImage = 1;
+
+function newImage(){
+
+switch(usingImage){
+
+    case 1: 
+        usingImage++;
+        document.getElementById("picture").src = "Kangaroo.jpg";
+        break;
+    
+    case 2:
+        usingImage++;
+        document.getElementById("picture").src = "Rabbit.jpg";
+        break;
+    
+    case 3:
+        usingImage =1;
+        document.getElementById("picture").src = "AfricanBushElephant.jpg";
+        break;
+}
+
+
+}
 </script>
 
-
-</body>
-</html> 
 
 </body>
 </html> 
